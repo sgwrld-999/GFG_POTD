@@ -30,7 +30,13 @@ public class PredictTheCol
         }
     }
 }
+/*
+Calculating the  number of zeros in each colum and 
+returing the number count of the column with maximum zeros.
+We can do it the naive way by traversing the matrix and as the 
+constraints are small we can do it in O(n^2) time.
 
+*/
 class Solution
 {
     int columnWithMaxZeros(int arr[][], int N)
