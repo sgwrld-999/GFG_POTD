@@ -138,3 +138,40 @@ class Solution {
 }
 
 
+/*
+CPP code for leetcode problem which is similar to this problem 
+Problem link : https://leetcode.com/problems/number-of-subarrays-with-bounded-maximum/
+class Solution {
+public:
+    int numSubarrayBoundedMax(vector<int>& nums, int L, int R) {
+        long size = 0; long ctr = 0;
+        long n = nums.size();
+        for(int i = 0 ; i < n ; i++){
+            if(nums[i] <= R){
+                while( i < n && nums[i] <= R){
+                    size++;
+                    i++;
+                }
+                ctr += (size * (size + 1)) / 2;
+                if(i < n && nums[i] > R){
+                    size = 0 ;
+                }
+            }
+        }
+        size = 0;
+        for(int i = 0 ; i < n ; i++){
+            if(nums[i] < L){
+                while( i < n && nums[i] < L){
+                    size++;
+                    i++;
+                }
+                ctr -= (size * (size + 1)) / 2;
+                if(i < n && nums[i] >= L){
+                    size = 0 ;
+                }
+            }
+        }
+        return (int)(ctr) ;
+    }
+};
+ */
